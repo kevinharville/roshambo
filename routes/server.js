@@ -12,25 +12,17 @@ app.use((req, res, next) => {
     next();
   });
 
-// wss.on('connection', function connection(ws) {
-//   ws.on('message', function incoming(data) {
-//     wss.clients.forEach(function each(client) {
-//       if (client !== ws && client.readyState === WebSocket.OPEN) {
-//         client.send(data);
-//       }
-//     })
-//   })
-// })
-
-wss.onmessage('connection', function connection(ws) {
-      ws.onopen('message', function incoming(data) {
-        wss.clients.forEach(function each(client) {
-          if (client !== ws && client.readyState === WebSocket.OPEN) {
-            client.send(data);
-          }
-        })
-      })
+wss.on('connection', function connection(ws) {
+  ws.on('message', function incoming(data) {
+    wss.clients.forEach(function each(client) {
+      if (client !== ws && client.readyState === WebSocket.OPEN) {
+        client.send(data);
+      }
     })
+  })
+})
+
+
 server.listen(port, function() {
   console.log(`Server is listening on ${port}!`)
 })
