@@ -4,7 +4,13 @@ const WebSocket = require('ws');
 
 const port = 6969;
 const server = http.createServer(express);
-const wss = new WebSocket.Server({ server })
+const wss = new WebSocket.Server({ server });
+
+const app = express();
+app.use((req, res, next) => {
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    next();
+  });
 
 wss.on('connection', function connection(ws) {
   ws.on('message', function incoming(data) {
