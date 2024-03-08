@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
-    "start2": "node ./javascripts/server.js"
+    "start2": "node ./routes/server.js"
   },
   "dependencies": {
     "build": "^0.1.4",
