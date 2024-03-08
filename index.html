@@ -1,0 +1,19 @@
+<html>
+    <body>
+        <h1 id="foo">Test Kevin this added because maybe it was moved Friday</h1>
+
+        
+    </body>
+    <script>
+        function getRPS() {
+            //return fetch('https://node-kevin-0a0633d8f3a3.herokuapp.com/hello').then(n => n.json());
+            return fetch('https://site--roshambo--76lmn2kbf8hd.code.run/hello').then(n => n.json());
+        }
+
+        getRPS().then(json => {
+            document.querySelector('#foo').innerText = JSON.stringify(json.thing);
+        });
+        
+    </script>
+    
+</html>
