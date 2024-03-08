@@ -60,7 +60,7 @@
             //return fetch('https://site--roshambo--76lmn2kbf8hd.code.run/hello').then(n => n.json());
 
             //some allege no-cors makes it worse:
-            return fetch('https://site--roshambo--76lmn2kbf8hd.code.run', { mode: 'no-cors'}).then(n => n.json());
+            return fetch('https://site--roshambo--76lmn2kbf8hd.code.run/hello', { mode: 'no-cors'}).then(n => n.json());
         }
 
         getRPS().then(json => {
