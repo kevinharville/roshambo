@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www && ./routes/server.js"
+    "ssssssssstart": "node ./bin/www && ./routes/server.js",
+    "start": "node ./routes/server.js"
   },
   "dependencies": {
     "build": "^0.1.4",
